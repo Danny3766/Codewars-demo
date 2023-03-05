@@ -20,7 +20,6 @@
 // If we run this function, This is an example.will be seen on the screen.As you see, console.log() is an useful method.You will use it a lot
 
 // My solution
-
 helloWorld = function () {
     var str = "Hello World!";
     console.log(str);
