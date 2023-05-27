@@ -67,17 +67,27 @@ function padIt(str, n) {
 }
 
 
+// other my favorite solution
+function padIt(str, n) {
+    let counter = 1;
+    while (counter <= n) {
+        if (counter % 2 != 0) str = '*' + str;
+        if (counter % 2 == 0) str += '*'
+        counter++
+    }
+    return str
+}
 
 
 
 
 // describe Test
-// describe("Tests", () => {
-//     it("test", () => {
-//         Test.assertSimilar(padIt("a", 1), "*a");
-//         Test.assertSimilar(padIt("a", 2), "*a*");
-//         Test.assertSimilar(padIt("a", 3), "**a*");
-//         Test.assertSimilar(padIt("a", 4), "**a**");
-//         Test.assertSimilar(padIt("a", 5), "***a**");
-//     });
-// });
+describe("Tests", () => {
+    it("test", () => {
+        Test.assertSimilar(padIt("a", 1), "*a");
+        Test.assertSimilar(padIt("a", 2), "*a*");
+        Test.assertSimilar(padIt("a", 3), "**a*");
+        Test.assertSimilar(padIt("a", 4), "**a**");
+        Test.assertSimilar(padIt("a", 5), "***a**");
+    });
+});
